@@ -1,0 +1,59 @@
+generated: '2026-08-12'
+method: searched
+source: https://finthrive.com/security-and-data-trust-center
+note: >-
+  FinThrive publishes no machine-readable API contract (see x-coverage in apis.yml),
+  so nothing here is derived from an OpenAPI document. Every entry below is either a
+  compliance/accreditation claim FinThrive makes on its own trust center page, or an
+  honest "unknown" where the standard cannot be assessed without access to the gated
+  developer portal. Nothing is asserted that FinThrive does not itself state.
+standards:
+- id: hitrust
+  conforms: true
+  evidence: 'Trust center: "Strict Compliance with NIST CSF, HITRUST, SOC, EHNAC and industry best practices"'
+  source: https://finthrive.com/security-and-data-trust-center
+- id: soc
+  conforms: true
+  evidence: Trust center names SOC compliance; report type (SOC 1/SOC 2, Type I/II) not specified publicly.
+  source: https://finthrive.com/security-and-data-trust-center
+- id: nist-csf
+  conforms: true
+  evidence: Trust center names NIST Cybersecurity Framework compliance.
+  source: https://finthrive.com/security-and-data-trust-center
+- id: ehnac
+  conforms: true
+  evidence: Trust center names EHNAC (Electronic Healthcare Network Accreditation Commission) accreditation.
+  source: https://finthrive.com/security-and-data-trust-center
+- id: hipaa
+  conforms: true
+  evidence: >-
+    FinThrive operates as a healthcare revenue cycle SaaS handling PHI for US hospitals
+    and health systems and publishes a HIPAA-oriented privacy notice; HIPAA is a
+    statutory obligation for this business, not an optional certification.
+  source: https://finthrive.com/privacy-policy
+- id: oauth2
+  conforms: unknown
+  evidence: >-
+    The developer portal offers Azure Active Directory sign-in, which implies OIDC/OAuth2
+    for portal identity, but the API's own security schemes are not published anonymously
+    (the portal's /mapi/apis returns zero APIs without a session).
+- id: oidc
+  conforms: unknown
+  evidence: Azure AD sign-in on api-portal.nthrive.com implies OIDC for portal auth; no discovery document is served (/.well-known/openid-configuration 404 on all hosts).
+- id: fhir-r4
+  conforms: unknown
+  evidence: No public FHIR endpoint, capability statement, or FHIR claim found on finthrive.com.
+- id: x12-edi
+  conforms: unknown
+  evidence: >-
+    FinThrive Claims Manager is a claims/clearinghouse-adjacent product and EHNAC accreditation
+    is clearinghouse-specific, which makes X12 837/835 handling near-certain in practice —
+    but FinThrive publishes no public transaction companion guide, so this is recorded as
+    unknown rather than asserted.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    The Azure APIM gateway at api.finthrive.com returns a custom JSON envelope
+    {"statusCode": 404, "message": "Resource not found"} with content-type application/json,
+    not application/problem+json.
+  source: probed https://api.finthrive.com/ (HTTP 404)

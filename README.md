@@ -42,5 +42,11 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-FinThrive is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+FinThrive is a healthcare revenue cycle management (RCM) technology company serving hospitals, health systems, ambulatory and physician practices, payers, life sciences organizations and channel partners across the United States. Formed from the 2022 rebrand of nThrive and the acquisition of TransUnion Healthcare, FinThrive sells a SaaS platform spanning patient access, revenue integrity, revenue optimization, analytics, education and agentic AI automation, all built on FinThrive Fusion, its unified data-intelligence and integration layer.
+
+FinThrive operates a production Azure API Management gateway at `api.finthrive.com` (aliased as `api.nthrive.com`) with a publicly reachable developer portal at `api-portal.nthrive.com` — but the API and product catalog behind that portal is not visible without an Azure Active Directory or FinThrive-issued evaluation sign-in, and no OpenAPI, AsyncAPI, GraphQL SDL, MCP server or agent card is published on any FinThrive host.
+
+- Website: https://finthrive.com/
+- Developer portal: https://api-portal.nthrive.com/
+- API gateway: https://api.finthrive.com
+- Security and Data Trust Center: https://finthrive.com/security-and-data-trust-center

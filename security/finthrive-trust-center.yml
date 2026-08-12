@@ -1,0 +1,38 @@
+generated: '2026-08-12'
+method: searched
+probe: true
+source: https://finthrive.com/security-and-data-trust-center
+url: https://finthrive.com/security-and-data-trust-center
+note: >-
+  The automated probe (0-working/probe-security-programs.py) missed this page because
+  FinThrive does not use any of the conventional locations — there is no trust.finthrive.com,
+  no security.finthrive.com, and no /trust, /security or /compliance path. The trust
+  center lives at the marketing-site slug /security-and-data-trust-center and was found
+  by reading the site's own sitemap.xml.
+certifications:
+- SOC
+- HITRUST
+- NIST CSF
+- EHNAC
+certification_notes: >-
+  The page states "Strict Compliance with NIST CSF, HITRUST, SOC, EHNAC and industry
+  best practices". It names "SOC" without qualifying the report type (SOC 1 vs SOC 2,
+  Type I vs Type II), so no more specific claim is recorded here. EHNAC is the
+  Electronic Healthcare Network Accreditation Commission, a healthcare-clearinghouse
+  accreditation specific to this sector.
+documentation_access:
+  portal: Whistic
+  gated: true
+  note: >-
+    Security documentation (SOC reports, HITRUST certification letters) is distributed
+    through a Whistic trust portal, which requires a request/NDA flow. The artifacts
+    themselves are not publicly downloadable.
+evidence:
+- source: https://finthrive.com/security-and-data-trust-center
+  http_status: 200
+  keywords: [NIST CSF, HITRUST, SOC, EHNAC, Whistic, trust center]
+gaps:
+- No /.well-known/security.txt on any FinThrive host (all 404 — see well-known/finthrive-well-known.yml).
+- No published vulnerability disclosure or bug bounty program, and no security@ contact
+  address stated on the trust center page.
+- No public status page.

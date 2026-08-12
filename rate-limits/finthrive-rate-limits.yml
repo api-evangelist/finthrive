@@ -1,0 +1,18 @@
+generated: '2026-08-12'
+method: searched
+source: https://api-portal.nthrive.com/ (developer portal) + live probes of https://api.finthrive.com
+limit_count: 0
+rate_limits: []
+headers_observed: []
+note: >-
+  FinThrive documents no rate limits publicly. The developer portal at
+  api-portal.nthrive.com is reachable but exposes no API or product to an anonymous
+  visitor (its own /mapi/apis and /mapi/products endpoints return {"value":[],"count":0}),
+  and Azure API Management rate-limit policy is configured per product — so any quota or
+  throttle in force is only visible once a subscription is granted. No RateLimit-*,
+  X-RateLimit-* or Retry-After header was returned on any anonymous request to
+  api.finthrive.com; the gateway answers unknown paths with a 404 JSON envelope before
+  any policy is evaluated.
+probes:
+- {url: 'https://api.finthrive.com/', status: 404, rate_limit_headers: none}
+- {url: 'https://api-portal.nthrive.com/mapi/products?api-version=2022-08-01', status: 200, body: '{"value":[],"count":0}'}

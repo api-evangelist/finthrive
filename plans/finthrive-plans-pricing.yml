@@ -1,0 +1,19 @@
+generated: '2026-08-12'
+method: searched
+source: https://finthrive.com/ sitemap.xml (366 URLs) + https://finthrive.com/contact-us
+plan_count: 0
+plans: []
+model: enterprise-contact-sales
+note: >-
+  FinThrive publishes no pricing. There is no /pricing page (HTTP 404) and no pricing,
+  plans, tiers or packaging URL anywhere in the site's own sitemap.xml. FinThrive sells
+  enterprise RCM software to hospitals, health systems, physician groups and payers
+  through a direct sales motion — the site's only commercial call to action is a
+  "Get a demo" / contact form. The API at api.finthrive.com is not independently
+  purchasable: portal access requires FinThrive-issued evaluation credentials or Azure
+  AD credentials tied to an existing customer relationship, so API entitlement follows
+  the underlying product contract rather than a published plan.
+evidence:
+- {url: 'https://finthrive.com/pricing', status: 404}
+- {url: 'https://finthrive.com/contact-us', status: 200}
+- {url: 'https://finthrive.com/sitemap.xml', status: 200, note: 'no pricing/plans URL among 366 entries'}

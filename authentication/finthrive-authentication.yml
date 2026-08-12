@@ -1,0 +1,34 @@
+generated: '2026-08-12'
+method: searched
+source: https://api-portal.nthrive.com/ + https://api-portal.nthrive.com/signin
+api_auth_documented_publicly: false
+note: >-
+  No Authentication pointer is wired in apis.yml. This file records what can be observed
+  about identity on FinThrive's API surface, and what can be observed is PORTAL identity,
+  not the API's own security scheme. FinThrive publishes no OpenAPI, so
+  0-working/derive-authentication.py has nothing to read; and the developer portal's own
+  catalog endpoint returns zero APIs anonymously, so the security schemes attached to
+  those APIs cannot be seen without credentials. Asserting an Authentication artifact
+  here would credit FinThrive with documented auth it has not published.
+portal_identity:
+  host: https://api-portal.nthrive.com
+  platform: Microsoft Azure API Management developer portal
+  providers:
+  - name: Azure Active Directory
+    path: /signin
+    note: 'Portal text: "Users with Azure Active Directory credentials sign in here."'
+  - name: FinThrive evaluation credentials
+    path: /evalsignin
+    note: 'Portal text: "If you have received credentials from FinThrive, use Evaluation Sign in, then go to the Products page."'
+api_identity:
+  scheme: unknown
+  note: >-
+    Azure API Management's default subscription-key model (Ocp-Apim-Subscription-Key)
+    is the platform norm and the portal's "sign up to acquire keys" boilerplate is
+    consistent with it, but FinThrive publishes nothing confirming it, so no scheme is
+    asserted here.
+  discovery_probes:
+  - {url: 'https://api.finthrive.com/.well-known/openid-configuration', status: 404}
+  - {url: 'https://api.finthrive.com/.well-known/oauth-authorization-server', status: 404}
+  - {url: 'https://api.finthrive.com/.well-known/oauth-protected-resource', status: 404}
+  - {url: 'https://api-portal.nthrive.com/mapi/apis?api-version=2022-08-01', status: 200, body: '{"value":[],"count":0}'}

@@ -1,0 +1,41 @@
+generated: '2026-08-12'
+method: searched
+source: https://api-portal.nthrive.com/ + https://finthrive.com/ sitemap.xml sweep
+note: >-
+  This file records what FinThrive publishes about the operational lifecycle of its API,
+  which is very little. No StatusPage or Deprecation pointer is wired in apis.yml because
+  neither surface was found — emitting them would credit FinThrive with operational
+  transparency it does not currently publish.
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: >-
+    The API is fronted by Azure API Management, which supports versioning natively, but
+    no version set, path prefix or version header is visible to an anonymous visitor.
+    api-portal.nthrive.com/mapi/apis?api-version=2022-08-01 returns {"value":[],"count":0}.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No deprecation or sunset policy published on the developer portal or the marketing site.
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    No public SLA. Availability commitments for FinThrive products are contractual and
+    reached through the Community Portal (finthrive.my.site.com/portal), which requires
+    a customer login.
+status_page: null
+status_page_probes:
+- {url: 'https://status.finthrive.com/', status: 0, result: DNS does not resolve}
+- {url: 'https://finthrive.status.io/', status: 0, result: DNS does not resolve}
+changelog: null
+changelog_note: >-
+  No dated API changelog or release-notes page found. finthrive.com/news carries corporate
+  press releases and finthrive.com/resources carries marketing content; neither is a
+  product or API changelog.
+support:
+  community_portal: https://finthrive.my.site.com/portal/s/
+  partner_portal: https://finthrive.my.site.com/partnersupport/s/
+  note: Both are Salesforce Experience Cloud sites and require a customer or partner login.
+deprecated_operations: []

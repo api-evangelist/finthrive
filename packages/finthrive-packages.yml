@@ -1,0 +1,25 @@
+generated: '2026-08-12'
+method: searched
+source: npm registry search, PyPI, GitHub org lookup, FinThrive developer portal
+package_count: 0
+packages: []
+note: >-
+  No first-party FinThrive or nThrive client library exists on any public registry. No
+  Packages or SDKs pointer is wired in apis.yml — this file records an absence. The
+  developer portal advertises "code samples in multiple languages", which is Azure API
+  Management's auto-generated per-operation snippet feature, not a distributed SDK.
+registries_searched:
+- {registry: npm, query: finthrive, result: 0 packages}
+- {registry: npm, query: nthrive, result: '1 package (keystone-nthrive 1.0.5, 2018-04-03) — unrelated third-party KeystoneJS module, not first-party'}
+- {registry: pypi, package: finthrive, status: 404}
+- {registry: pypi, package: nthrive, status: 404}
+github:
+  org: https://github.com/nThrive
+  legal_name: nThrive, Inc.
+  created: '2018-05-04'
+  public_repos: 0
+  note: >-
+    The legacy nThrive GitHub organization exists and the legal name matches the company
+    FinThrive rebranded from, but it publishes zero public repositories. No
+    GitHubOrganization pointer is wired, because there is no public code surface there.
+  org_finthrive: 'https://github.com/finthrive — HTTP 404, does not exist'

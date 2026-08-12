@@ -1,0 +1,27 @@
+generated: '2026-08-12'
+method: probed
+source: live anonymous requests to https://api.finthrive.com and https://api.nthrive.com
+format: custom
+rfc9457: false
+note: >-
+  No ErrorCatalog pointer is wired in apis.yml. FinThrive publishes no error reference,
+  and this file contains exactly one error shape — the gateway-level 404 an anonymous
+  caller observes. That is a real, provider-served response worth recording as evidence
+  that a live API gateway is listening, but it is not an error catalog and must not be
+  scored as one. Application-level error semantics sit behind the gated developer portal.
+envelope:
+  content_type: application/json
+  shape: '{"statusCode": <int>, "message": "<string>"}'
+  platform: Microsoft Azure API Management default gateway response
+problems:
+- status: 404
+  code: 404
+  message: Resource not found
+  scope: gateway
+  observed_on:
+  - https://api.finthrive.com/
+  - https://api.finthrive.com/openapi.json
+  - https://api.nthrive.com/
+  note: >-
+    Returned for every unmatched path on both production hostnames. This is APIM's
+    default "no API matches this request" response, not an application error.

@@ -1,0 +1,69 @@
+generated: '2026-08-12'
+method: probed
+source: live GET of each /.well-known/ path on every FinThrive host in apis.yml
+note: >-
+  Every probed path returned 404 on every host. No WellKnown or SecurityTxt pointer
+  is wired in apis.yml, because this file documents an ABSENCE, not a served surface.
+  Two distinct 404 shapes were observed and are worth recording: finthrive.com is a
+  HubSpot-hosted marketing site that answers every unknown path with an 88KB HTML
+  404 page, while api.finthrive.com / api.nthrive.com answer with the Azure API
+  Management JSON envelope {"statusCode": 404, "message": "Resource not found"} —
+  which confirms a real API gateway is listening even though it publishes no
+  discovery documents.
+hosts:
+- host: https://finthrive.com
+  kind: website
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://api.finthrive.com
+  kind: api-gateway
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://api.nthrive.com
+  kind: api-gateway
+  note: >-
+    Same Azure Application Insights instrumentation key (cid-v1:50cc6526-88c1-4806-a064-32143f7fab2c)
+    as api.finthrive.com — the legacy nThrive hostname and the FinThrive hostname front
+    the same production APIM instance.
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://api-portal.nthrive.com
+  kind: developer-portal
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+summary:
+  hosts_probed: 4
+  paths_probed: 36
+  documents_found: 0
