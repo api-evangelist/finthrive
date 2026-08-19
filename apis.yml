@@ -18,7 +18,7 @@ url: https://raw.githubusercontent.com/api-evangelist/finthrive/refs/heads/main/
 image: https://finthrive.com/hs-fs/hubfs/social-suggested-images/finthrive.comhubfsFinThrive_primary_logo_TM_darkBG_RGB_400x60%5B82%5D.png
 x-type: company
 x-source: harvest:secondary-market
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-12'
 modified: '2026-08-12'
 tags:
