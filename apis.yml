@@ -15,6 +15,17 @@ description: 'FinThrive is a healthcare revenue cycle management (RCM) technolog
   or FinThrive-issued evaluation sign-in, so no machine-readable contract is published
   to the public.'
 url: https://raw.githubusercontent.com/api-evangelist/finthrive/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://finthrive.com/hs-fs/hubfs/social-suggested-images/finthrive.comhubfsFinThrive_primary_logo_TM_darkBG_RGB_400x60%5B82%5D.png
 x-type: company
 x-source: harvest:secondary-market
