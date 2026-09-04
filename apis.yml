@@ -26,6 +26,21 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  generated: '2026-09-03'
+  method: derived
 image: https://finthrive.com/hs-fs/hubfs/social-suggested-images/finthrive.comhubfsFinThrive_primary_logo_TM_darkBG_RGB_400x60%5B82%5D.png
 x-type: company
 x-source: harvest:secondary-market
