@@ -1,19 +1,16 @@
 aid: finthrive
 name: FinThrive
-description: 'FinThrive is a healthcare revenue cycle management (RCM) technology company
-  serving hospitals, health systems, ambulatory and physician practices, payers, life
-  sciences organizations and channel partners across the United States. Formed from
-  the 2022 rebrand of nThrive and the acquisition of TransUnion Healthcare, FinThrive
-  sells a SaaS platform spanning patient access (Access Coordinator, Virtual Intake,
-  Insurance Discover), revenue integrity (CDM Management, Revenue Capture, Knowledge
-  Source), revenue optimization (Claims Manager, Contract Manager, A/R Optimizer),
-  analytics (FinThrive Analyze), education (FinThrive Learn) and agentic AI automation,
-  all built on FinThrive Fusion, its unified data-intelligence and integration layer.
-  It operates a production Azure API Management gateway at api.finthrive.com (aliased
-  as api.nthrive.com) with a public developer portal at api-portal.nthrive.com, but
-  every API and product listed there is visible only after an Azure Active Directory
-  or FinThrive-issued evaluation sign-in, so no machine-readable contract is published
-  to the public.'
+description: FinThrive is a healthcare revenue cycle management (RCM) technology company serving hospitals,
+  health systems, ambulatory and physician practices, payers, life sciences organizations and channel
+  partners across the United States. Formed from the 2022 rebrand of nThrive and the acquisition of TransUnion
+  Healthcare, FinThrive sells a SaaS platform spanning patient access (Access Coordinator, Virtual Intake,
+  Insurance Discover), revenue integrity (CDM Management, Revenue Capture, Knowledge Source), revenue
+  optimization (Claims Manager, Contract Manager, A/R Optimizer), analytics (FinThrive Analyze), education
+  (FinThrive Learn) and agentic AI automation, all built on FinThrive Fusion, its unified data-intelligence
+  and integration layer. It operates a production Azure API Management gateway at api.finthrive.com (aliased
+  as api.nthrive.com) with a public developer portal at api-portal.nthrive.com, but every API and product
+  listed there is visible only after an Azure Active Directory or FinThrive-issued evaluation sign-in,
+  so no machine-readable contract is published to the public.
 url: https://raw.githubusercontent.com/api-evangelist/finthrive/refs/heads/main/apis.yml
 deliveryModel:
   model: saas
@@ -74,15 +71,14 @@ tags_raw:
 - SaaS
 - United States
 apis:
-- aid: finthrive-api
+- aid: finthrive:finthrive-api
   name: FinThrive API
-  description: 'The FinThrive API, published through a Microsoft Azure API Management
-    instance. The developer portal at api-portal.nthrive.com is publicly reachable
-    and describes auto-generated API documentation, multi-language code samples, an
-    interactive API Console and a document library, but the API and product catalog
-    is not exposed to anonymous visitors: the portal''s own management endpoint
-    (/mapi/apis) returns zero APIs and zero products without a session. Access requires
-    either Azure Active Directory credentials or FinThrive-issued evaluation credentials.'
+  description: 'The FinThrive API, published through a Microsoft Azure API Management instance. The developer
+    portal at api-portal.nthrive.com is publicly reachable and describes auto-generated API documentation,
+    multi-language code samples, an interactive API Console and a document library, but the API and product
+    catalog is not exposed to anonymous visitors: the portal''s own management endpoint (/mapi/apis) returns
+    zero APIs and zero products without a session. Access requires either Azure Active Directory credentials
+    or FinThrive-issued evaluation credentials.'
   humanURL: https://api-portal.nthrive.com/
   baseURL: https://api.finthrive.com
   tags:
@@ -140,12 +136,10 @@ x-enrichment:
 x-coverage:
   state: gated
   reason: customer-only-docs
-  detail: >-
-    FinThrive's Azure API Management developer portal at api-portal.nthrive.com loads
-    for anyone, but its own catalog endpoint /mapi/apis?api-version=2022-08-01 returns
-    {"value":[],"count":0} to an anonymous caller — the API and product list is only
-    populated after an Azure Active Directory or FinThrive-issued evaluation sign-in,
-    so the contract behind the live gateway at api.finthrive.com is never public.
+  detail: FinThrive's Azure API Management developer portal at api-portal.nthrive.com loads for anyone,
+    but its own catalog endpoint /mapi/apis?api-version=2022-08-01 returns {"value":[],"count":0} to an
+    anonymous caller — the API and product list is only populated after an Azure Active Directory or FinThrive-issued
+    evaluation sign-in, so the contract behind the live gateway at api.finthrive.com is never public.
   evidence:
   - url: https://api-portal.nthrive.com/mapi/apis?api-version=2022-08-01
     status: 200
