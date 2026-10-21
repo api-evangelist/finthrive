@@ -100,3 +100,76 @@
     - FinThrive Revenue Systems, LLC
   status: not-a-workflow
   arazzo: null
+- slug: finthrive-caqh-core-certification
+  label: CAQH CORE Certification
+  partner_name: CAQH CORE Certification
+  category: HIPAA administrative operating rules (eligibility, claims, ERA/EFT, prior auth)
+  type: register
+  channel: standard-directory
+  evidence: https://www.dataspring.com/core/core-certified-organizations-pending-and-current
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: CAQH CORE certified organizations (caqh.org/core/core-certification -> dataspring.com)
+    spec_file: null
+    standard: CAQH CORE Operating Rules certification
+    role: certified clearinghouse
+    registered_name: FinThrive, Inc.
+    matched_domain: null
+    matched_by: register-name
+    market_fit: own apis.yml tags carry a health administration / health IT term
+    detected_by: sweep-payer-interop-caqh-core.py
+    detected: '2026-10-21'
+    register_name_note: register-name 'finthrive' = finthrive; no wikidata P856
+    listings:
+    - name: FinThrive, Inc.
+      tab: clearinghouses
+      product: Insurance Clearinghouse
+      rules:
+      - rule_set: Eligibility & Benefits
+        status: Active
+      - rule_set: Claim Status
+        status: Active
+    certified_products:
+    - product: CAQH CORE Eligibility & Benefits
+      rule_set: Eligibility & Benefits
+      lapsed: false
+      products:
+      - Insurance Clearinghouse
+    - product: CAQH CORE Claim Status
+      rule_set: Claim Status
+      lapsed: false
+      products:
+      - Insurance Clearinghouse
+    signal_note: certified_products = one entry per CORE operating-rule SET (product type); lapsed when no listed
+      status is Active; several certified products on one rule set count once
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
+- slug: finthrive-wedi
+  label: WEDI
+  partner_name: WEDI
+  category: Health administrative data exchange (membership)
+  type: register
+  channel: standard-directory
+  evidence: https://members.wedi.org/website-organization-directory/FindStartsWith?term=%23%21
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: WEDI member organizations (members.wedi.org directory)
+    spec_file: null
+    standard: WEDI (HIPAA administrative simplification)
+    role: member
+    registered_name: FinThrive
+    matched_domain: finthrive.com
+    matched_by: domain
+    market_fit: own apis.yml tags carry a health administration / health IT term
+    detected_by: sweep-payer-interop-caqh-core.py
+    detected: '2026-10-21'
+    website: http://www.finthrive.com/
+    identity_source: the website the member filed on the register (no lookup)
+    signal_note: membership = participation
+  status: not-a-workflow
+  arazzo: null
