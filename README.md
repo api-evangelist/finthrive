@@ -64,11 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-FinThrive is a healthcare revenue cycle management (RCM) technology company serving hospitals, health systems, ambulatory and physician practices, payers, life sciences organizations and channel partners across the United States. Formed from the 2022 rebrand of nThrive and the acquisition of TransUnion Healthcare, FinThrive sells a SaaS platform spanning patient access, revenue integrity, revenue optimization, analytics, education and agentic AI automation, all built on FinThrive Fusion, its unified data-intelligence and integration layer.
+FinThrive is a healthcare revenue cycle management (RCM) technology company serving hospitals, health systems, ambulatory and physician practices, payers, life sciences organizations and channel partners across the United States. Formed from the 2022 rebrand of nThrive and the acquisition of TransUnion Healthcare, FinThrive sells a SaaS platform spanning patient access (Access Coordinator, Virtual Intake, Insurance Discover), revenue integrity (CDM Management, Revenue Capture, Knowledge Source), revenue optimization (Claims Manager, Contract Manager, A/R Optimizer), analytics (FinThrive Analyze), education (FinThrive Learn) and agentic AI automation, all built on FinThrive Fusion, its unified data-intelligence and integration layer. It operates a production Azure API Management gateway at api.finthrive.com (aliased as api.nthrive.com) with a public developer portal at api-portal.nthrive.com, but every API and product listed there is visible only after an Azure Active Directory or FinThrive-issued evaluation sign-in, so no machine-readable contract is published to the public.
 
-FinThrive operates a production Azure API Management gateway at `api.finthrive.com` (aliased as `api.nthrive.com`) with a publicly reachable developer portal at `api-portal.nthrive.com` — but the API and product catalog behind that portal is not visible without an Azure Active Directory or FinThrive-issued evaluation sign-in, and no OpenAPI, AsyncAPI, GraphQL SDL, MCP server or agent card is published on any FinThrive host.
+**Areas:** Company · Healthcare · Revenue Cycle Management · Health IT · Claims · Billing · Payments · Insurance · Patient Access · Analytics · Software-as-a-Service · United States
 
-- Website: https://finthrive.com/
-- Developer portal: https://api-portal.nthrive.com/
-- API gateway: https://api.finthrive.com
-- Security and Data Trust Center: https://finthrive.com/security-and-data-trust-center
+## FinThrive on APIs.io
+
+Everything profiled for FinThrive is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/finthrive/](https://apis.io/providers/finthrive/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [FinThrive API](https://apis.io/apis/finthrive/finthrive-api/) — The FinThrive API, published through a Microsoft Azure API Management instance. The developer portal at api-portal.nthrive.com is publicly reachable and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Finthrive Authentication](https://apis.io/security/finthrive/finthrive-authentication/)
+- [Finthrive Domain Security](https://apis.io/security/finthrive/finthrive-domain-security/)
+- [Finthrive Trust Center](https://apis.io/security/finthrive/finthrive-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Finthrive Plans Pricing](https://apis.io/plans/finthrive/finthrive-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Finthrive Rate Limits](https://apis.io/rate-limits/finthrive/finthrive-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://finthrive.com/)
+- [Support](https://finthrive.my.site.com/portal/s/)
+- [Blog](https://finthrive.com/resources?content_type=blog)
+- [Compliance](https://finthrive.com/security-and-data-trust-center)
+- [Terms of service](https://finthrive.com/terms-conditions)
+- [Privacy policy](https://finthrive.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 21.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 43.4 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.1** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/finthrive/](https://apis.io/providers/finthrive/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for FinThrive: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/finthrive/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
